@@ -1,8 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
+import PropTypes from 'prop-types'
 import './App.css';
 
 class Title extends React.Component {
+  static propTypes = {
+    title: PropTypes.string,
+    soldCount: PropTypes.number
+  }
 
   render() {
     return (
