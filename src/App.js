@@ -3,11 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 
 class Title extends React.Component {
-  title = 'Beer Shop'
 
   render() {
     return (
-      <h1 className='Title'>{this.title}</h1>
+      <div>
+        <h1 className='Title'>{this.props.title}</h1>
+        <small>Cervejas vendidas hoje: {this.props.soldCount}</small>
+      </div>
     )
   }
 }
@@ -15,7 +17,7 @@ class Title extends React.Component {
 function App() {
   return (
     <div className="App">
-      <Title />
+      <Title title='Beer Shop Manuel' soldCount={10}/>
     </div>
   );
 }
