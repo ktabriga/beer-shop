@@ -9,10 +9,11 @@ class Title extends React.Component {
   }
 
   render() {
+    const {title, soldCount} = this.props
     return (
-      <div>
-        <h1 className='Title'>{this.props.title}</h1>
-        <small>Cervejas vendidas hoje: {this.props.soldCount}</small>
+      <div className='Title'>
+        <h1>{title}</h1>
+        <small>Cervejas vendidas hoje: {soldCount}</small>
       </div>
     )
   }
